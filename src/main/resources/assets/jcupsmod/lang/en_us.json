@@ -1,0 +1,9 @@
+{
+  "item.jcupsmod.brenaxe": "Bren-Axe",
+  "item.jcupsmod.brenium": "Brenium",
+
+  "block.jcupsmod.brenium_block": "Block of Brenium",
+  "block.jcupsmod.brenium_extractor": "Brenium Extractor",
+
+  "itemgroup.brenium": "Brenium Items"
+}
