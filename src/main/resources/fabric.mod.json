@@ -1,0 +1,40 @@
+{
+	"schemaVersion": 1,
+	"id": "jcupsmod",
+	"version": "${version}",
+	"name": "Jcups Mod",
+	"description": "This is my mod hehehehehehehehe",
+	"authors": [
+		"Jcup"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/jcupsmod/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"net.jcup.testmod.JcupsMod"
+		],
+		"client": [
+			"net.jcup.testmod.JcupsModClient"
+		],
+		"fabric-datagen": [
+			"net.jcup.testmod.JcupsModDataGenerator"
+		]
+	},
+	"mixins": [
+		"jcupsmod.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.15.1",
+		"minecraft": "~1.20.4",
+		"java": ">=17",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
