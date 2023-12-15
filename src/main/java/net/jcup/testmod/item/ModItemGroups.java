@@ -16,9 +16,17 @@ public class ModItemGroups {
             FabricItemGroup.builder().displayName(Text.translatable("itemgroup.brenium"))
                     .icon(() -> new ItemStack(ModItems.BRENIUM)).entries((displayContext, entries) -> {
                         entries.add(ModItems.BRENIUM);
+                        entries.add(ModItems.CONCENTRATED_BRENIUM);
+
                         entries.add(ModItems.BRENAXE);
+                        entries.add(ModItems.BRENIUM_STAFF);
+
                         entries.add(ModBlocks.BRENIUM_BLOCK);
                         entries.add(ModBlocks.BRENIUM_EXTRACTOR);
+                        entries.add(ModBlocks.BRENIUM_BOMB);
+
+                        entries.add(ModBlocks.BRENIUM_ORE);
+                        entries.add(ModBlocks.END_STONE_BRENIUM_ORE);
                     }).build());
 
     public static void registerItemGroups() {

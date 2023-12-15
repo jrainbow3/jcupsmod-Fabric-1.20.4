@@ -1,9 +1,14 @@
 {
   "item.jcupsmod.brenaxe": "Bren-Axe",
+  "item.jcupsmod.brenium_staff": "Brenium Staff",
   "item.jcupsmod.brenium": "Brenium",
+  "item.jcupsmod.concentrated_brenium": "Concentrated Brenium",
 
   "block.jcupsmod.brenium_block": "Block of Brenium",
   "block.jcupsmod.brenium_extractor": "Brenium Extractor",
+  "block.jcupsmod.brenium_bomb": "Brenium Bomb",
+  "block.jcupsmod.brenium_ore": "Brenium Ore",
+  "block.jcupsmod.end_stone_brenium_ore": "End Stone Brenium Ore",
 
   "itemgroup.brenium": "Brenium Items"
 }
