@@ -2,10 +2,12 @@ package net.jcup.testmod.entity.custom;
 
 import net.jcup.testmod.entity.ModEntities;
 import net.jcup.testmod.entity.client.BreniumBombRenderer;
+import net.jcup.testmod.particle.ModParticles;
 import net.minecraft.entity.*;
 import net.minecraft.entity.damage.DamageSource;
 import net.minecraft.entity.mob.MobEntity;
 import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.item.ItemUsageContext;
 import net.minecraft.particle.ParticleTypes;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
@@ -45,7 +47,14 @@ public class BreniumBombEntity extends TntEntity {
             this.updateWaterState();
             if (this.getWorld().isClient) {
                 this.getWorld().addParticle(ParticleTypes.SMOKE, this.getX(), this.getY() + 0.5, this.getZ(), 0.0, 0.0, 0.0);
+                spawnParticles();
             }
+        }
+    }
+
+    private void spawnParticles() {
+        for(int i = 0; i < 50; i++) {
+            this.getWorld().addParticle(ModParticles.BREN_FACE, getX(), getY()+0.5, getZ(), getX() + (Math.random()-.5) * 4, getY() + Math.random() * 4, getZ() + (Math.random()-.5) * 4);
         }
     }
 
@@ -53,6 +62,7 @@ public class BreniumBombEntity extends TntEntity {
 
         World world = this.getWorld();
         if(world == null || world.isClient()) return;
+
         world.createExplosion(this, getX(), getY(), getZ(), 20.0F, true, World.ExplosionSourceType.TNT);
 
         this.discard();

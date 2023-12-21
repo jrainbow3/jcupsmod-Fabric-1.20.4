@@ -9,6 +9,7 @@ import net.jcup.testmod.entity.client.BreniumBombModel;
 import net.jcup.testmod.entity.client.BreniumBombRenderer;
 import net.jcup.testmod.entity.client.ModModelLayers;
 import net.jcup.testmod.particle.ModParticles;
+import net.jcup.testmod.particle.custom.BrenFaceParticle;
 import net.minecraft.client.particle.FlameParticle;
 import net.minecraft.client.render.entity.TntEntityRenderer;
 import net.minecraft.client.render.entity.model.EntityModelLayer;
@@ -21,6 +22,6 @@ public class JcupsModClient implements ClientModInitializer {
         EntityRendererRegistry.register(ModEntities.BRENIUM_BOMB, BreniumBombRenderer::new);
         EntityModelLayerRegistry.registerModelLayer(ModModelLayers.BRENIUM_BOMB, BreniumBombModel::getTexturedModelData);
 
-        ParticleFactoryRegistry.getInstance().register(ModParticles.BREN_FACE, FlameParticle.Factory::new);
+        ParticleFactoryRegistry.getInstance().register(ModParticles.BREN_FACE, BrenFaceParticle.Factory::new);
     }
 }

@@ -45,7 +45,7 @@ public class BreniumBombBlock extends TntBlock {
             player.incrementStat(Stats.USED.getOrCreateStat(item));
             return ActionResult.success(world.isClient);
         }
-        return ActionResult.SUCCESS;
+        return super.onUse(state, world, pos, player, hand, hit);
     }
 
     private static void primeTnt(World world, BlockPos pos, LivingEntity igniter) {
@@ -64,7 +64,7 @@ public class BreniumBombBlock extends TntBlock {
         if (world.isClient) {
             return;
         }
-        BreniumBombEntity breniumBomb = BreniumBombEntity.create(world, (double)pos.getX() + 0.5, pos.getY(), (double)pos.getZ() + 0.5, explosion.getCausingEntity());
+        BreniumBombEntity breniumBomb = spawnBreniumBomb(world, (double)pos.getX() + 0.5, pos.getY(), (double)pos.getZ() + 0.5, explosion.getCausingEntity());
         int i = breniumBomb.getFuse();
         breniumBomb.setFuse((short)(world.random.nextInt(i / 4) + i / 8));
         world.setBlockState(pos, Blocks.AIR.getDefaultState());
