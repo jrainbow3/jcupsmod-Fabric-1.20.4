@@ -1,9 +1,0 @@
-{
-  "replace": false,
-  "values": [
-    "jcupsmod:brenium_block",
-    "jcupsmod:brenium_extractor",
-    "jcupsmod:brenium_ore",
-    "jcupsmod:end_stone_brenium_ore"
-  ]
-}

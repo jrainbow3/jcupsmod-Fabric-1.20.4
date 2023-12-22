@@ -1,0 +1,14 @@
+{
+  "brenium_bomb_explosion": {
+    "subtitle": "sounds.jcupsmod.brenium_bomb_explosion",
+    "sounds": [
+      "jcupsmod:brenium_bomb_explosion"
+    ]
+  },
+  "brenium_bomb_fuse": {
+    "subtitle": "sounds.jcupsmod.brenium_bomb_fuse",
+    "sounds": [
+      "jcupsmod:brenium_bomb_fuse"
+    ]
+  }
+}

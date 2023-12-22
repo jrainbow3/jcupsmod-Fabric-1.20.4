@@ -3,12 +3,14 @@ package net.jcup.testmod.entity.custom;
 import net.jcup.testmod.entity.ModEntities;
 import net.jcup.testmod.entity.client.BreniumBombRenderer;
 import net.jcup.testmod.particle.ModParticles;
+import net.jcup.testmod.sound.ModSounds;
 import net.minecraft.entity.*;
 import net.minecraft.entity.damage.DamageSource;
 import net.minecraft.entity.mob.MobEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemUsageContext;
 import net.minecraft.particle.ParticleTypes;
+import net.minecraft.sound.SoundCategory;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import net.minecraft.world.explosion.Explosion;
@@ -38,6 +40,7 @@ public class BreniumBombEntity extends TntEntity {
         }
         int i = this.getFuse() - 1;
         this.setFuse(i);
+        if(!this.getWorld().isClient && i % 5 == 0) this.getWorld().playSound(null, getX(), getY(), getZ(), ModSounds.BRENIUM_BOMB_FUSE, SoundCategory.BLOCKS);
         if (i <= 0) {
             this.discard();
             if (!this.getWorld().isClient) {
@@ -63,7 +66,7 @@ public class BreniumBombEntity extends TntEntity {
         World world = this.getWorld();
         if(world == null || world.isClient()) return;
 
-        world.createExplosion(this, getX(), getY(), getZ(), 20.0F, true, World.ExplosionSourceType.TNT);
+        world.createExplosion(this, null, null, getX(), getY(), getZ(), 20.0F, true, World.ExplosionSourceType.TNT, ModParticles.BREN_FACE, ParticleTypes.EXPLOSION_EMITTER, ModSounds.BRENIUM_BOMB_EXPLOSION);
 
         this.discard();
     }

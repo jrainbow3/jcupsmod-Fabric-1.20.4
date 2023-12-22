@@ -17,7 +17,7 @@ public class BrenFaceParticle extends SpriteBillboardParticle {
         this.x = xd;
         this.y = yd;
         this.z = zd;
-        this.scale *= 0.75f;
+        this.scale *= 1.75f;
         this.maxAge = 20;
         this.setSpriteForAge(spriteSet);
 
