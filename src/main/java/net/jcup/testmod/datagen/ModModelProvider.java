@@ -6,7 +6,11 @@ import net.jcup.testmod.block.ModBlocks;
 import net.jcup.testmod.item.ModItems;
 import net.minecraft.data.client.BlockStateModelGenerator;
 import net.minecraft.data.client.ItemModelGenerator;
+import net.minecraft.data.client.Model;
 import net.minecraft.data.client.Models;
+import net.minecraft.util.Identifier;
+
+import java.util.Optional;
 
 public class ModModelProvider extends FabricModelProvider {
     public ModModelProvider(FabricDataOutput output) {
@@ -28,6 +32,11 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.BRENIUM, Models.GENERATED);
         itemModelGenerator.register(ModItems.BRENIUM_STAFF, Models.GENERATED);
         itemModelGenerator.register(ModItems.CONCENTRATED_BRENIUM, Models.GENERATED);
+
+        itemModelGenerator.register(ModItems.KATE_SPAWN_EGG,
+                new Model(Optional.of(new Identifier("item/template_spawn_egg")), Optional.empty()));
+        itemModelGenerator.register(ModItems.JOJO_SPAWN_EGG,
+                new Model(Optional.of(new Identifier("item/template_spawn_egg")), Optional.empty()));
 
     }
 }

@@ -10,5 +10,40 @@
     "sounds": [
       "jcupsmod:brenium_bomb_fuse"
     ]
+  },
+
+  "kate_idle_1": {
+    "subtitle": "sounds.jcupsmod.kate_idle_1",
+    "sounds": [
+      "jcupsmod:kate_idle_1"
+    ]
+  },
+
+  "kate_idle_2": {
+    "subtitle": "sounds.jcupsmod.kate_idle_2",
+    "sounds": [
+      "jcupsmod:kate_idle_2"
+    ]
+  },
+
+  "kate_hurt": {
+    "subtitle": "sounds.jcupsmod.kate_hurt",
+    "sounds": [
+      "jcupsmod:kate_hurt"
+    ]
+  },
+
+  "kate_angry": {
+    "subtitle": "sounds.jcupsmod.kate_angry",
+    "sounds": [
+      "jcupsmod:kate_angry"
+    ]
+  },
+
+  "kate_death": {
+    "subtitle": "sounds.jcupsmod.kate_death",
+    "sounds": [
+      "jcupsmod:kate_death"
+    ]
   }
 }

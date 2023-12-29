@@ -3,7 +3,7 @@ package net.jcup.testmod.block;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.jcup.testmod.JcupsMod;
-import net.jcup.testmod.block.custom.BreniumBombBlock;
+import net.jcup.testmod.block.custom.IdunnoBombBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.ExperienceDroppingBlock;
@@ -26,7 +26,7 @@ public class ModBlocks {
             new ExperienceDroppingBlock(UniformIntProvider.create(4, 7), FabricBlockSettings.copyOf(Blocks.END_STONE).strength(4f)));
 
     public static final Block BRENIUM_BOMB = registerBlock("brenium_bomb",
-            new BreniumBombBlock(FabricBlockSettings.copyOf(Blocks.TNT)));
+            new IdunnoBombBlock(FabricBlockSettings.copyOf(Blocks.TNT)));
     private static Block registerBlock(String name, Block block) {
         registerBlockItem(name, block);
         return Registry.register(Registries.BLOCK, new Identifier(JcupsMod.MOD_ID, name), block);

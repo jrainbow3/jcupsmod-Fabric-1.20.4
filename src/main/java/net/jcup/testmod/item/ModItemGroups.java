@@ -27,6 +27,9 @@ public class ModItemGroups {
 
                         entries.add(ModBlocks.BRENIUM_ORE);
                         entries.add(ModBlocks.END_STONE_BRENIUM_ORE);
+
+                        entries.add(ModItems.KATE_SPAWN_EGG);
+                        entries.add(ModItems.JOJO_SPAWN_EGG);
                     }).build());
 
     public static void registerItemGroups() {

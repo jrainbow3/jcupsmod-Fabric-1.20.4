@@ -4,6 +4,9 @@
   "item.jcupsmod.brenium": "Brenium",
   "item.jcupsmod.concentrated_brenium": "Concentrated Brenium",
 
+  "item.jcupsmod.kate_spawn_egg": "Kate Spawn Egg",
+  "item.jcupsmod.jojo_spawn_egg": "Jojo Spawn Egg",
+
   "block.jcupsmod.brenium_block": "Block of Brenium",
   "block.jcupsmod.brenium_extractor": "Brenium Extractor",
   "block.jcupsmod.brenium_bomb": "Brenium Bomb",
@@ -13,5 +16,10 @@
   "itemgroup.brenium": "Brenium Items",
 
   "sounds.jcupsmod.brenium_bomb_explosion": "Brenium Bomb Explodes",
-  "sounds.jcupsmod.brenium_bomb_fuse": "Brenium Bomb Fuse Burns"
+  "sounds.jcupsmod.brenium_bomb_fuse": "Brenium Bomb Fuse Burns",
+  "sounds.jcupsmod.kate_idle_1": "Kate chortles",
+  "sounds.jcupsmod.kate_idle_2": "Kate chortles",
+  "sounds.jcupsmod.kate_hurt": "Kate laughs in pain",
+  "sounds.jcupsmod.kate_death": "Kate dies",
+  "sounds.jcupsmod.kate_angry": "Kate rages"
 }
