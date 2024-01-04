@@ -7,6 +7,7 @@ import net.minecraft.entity.EntityType;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.MovementType;
 import net.minecraft.entity.TntEntity;
+import net.minecraft.particle.ParticleType;
 import net.minecraft.particle.ParticleTypes;
 import net.minecraft.sound.SoundCategory;
 import net.minecraft.world.World;
@@ -17,8 +18,8 @@ public class IdunnoBombEntity extends TntEntity {
         super(entityType, world);
     }
 
-    public static IdunnoBombEntity create(World world, double x, double y, double z, LivingEntity igniter) {
-        IdunnoBombEntity entity = new IdunnoBombEntity(ModEntities.BRENIUM_BOMB, world);
+    public static IdunnoBombEntity create(World world, double x, double y, double z, LivingEntity igniter, float fuseRemaining, boolean isChild) {
+        IdunnoBombEntity entity = new IdunnoBombEntity(ModEntities.IDUNNO_BOMB, world);
         entity.updatePosition(x, y, z);
         entity.igniter = igniter;
         return entity;
@@ -36,7 +37,7 @@ public class IdunnoBombEntity extends TntEntity {
         }
         int i = this.getFuse() - 1;
         this.setFuse(i);
-        if(!this.getWorld().isClient && i % 5 == 0) this.getWorld().playSound(null, getX(), getY(), getZ(), ModSounds.BRENIUM_BOMB_FUSE, SoundCategory.BLOCKS);
+        //if(!this.getWorld().isClient && i % 5 == 0) this.getWorld().playSound(null, getX(), getY(), getZ(), ModSounds.BRENIUM_BOMB_FUSE, SoundCategory.BLOCKS);
         if (i <= 0) {
             this.discard();
             if (!this.getWorld().isClient) {
@@ -46,7 +47,7 @@ public class IdunnoBombEntity extends TntEntity {
             this.updateWaterState();
             if (this.getWorld().isClient) {
                 this.getWorld().addParticle(ParticleTypes.SMOKE, this.getX(), this.getY() + 0.5, this.getZ(), 0.0, 0.0, 0.0);
-                spawnParticles();
+                //spawnParticles();
             }
         }
     }
@@ -62,7 +63,7 @@ public class IdunnoBombEntity extends TntEntity {
         World world = this.getWorld();
         if(world == null || world.isClient()) return;
 
-        world.createExplosion(this, null, null, getX(), getY(), getZ(), 20.0F, true, World.ExplosionSourceType.TNT, ModParticles.BREN_FACE, ParticleTypes.EXPLOSION_EMITTER, ModSounds.BRENIUM_BOMB_EXPLOSION);
+        world.createExplosion(this, null, null, getX(), getY(), getZ(), 5.0F, true, World.ExplosionSourceType.TNT);
 
         this.discard();
     }
