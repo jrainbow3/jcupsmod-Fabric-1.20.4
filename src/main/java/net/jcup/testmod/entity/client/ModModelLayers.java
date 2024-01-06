@@ -7,6 +7,8 @@ import net.minecraft.util.Identifier;
 public class ModModelLayers {
     public static final EntityModelLayer BRENIUM_BOMB =
             new EntityModelLayer(new Identifier(JcupsMod.MOD_ID, "brenium_bomb"), "main");
+    public static final EntityModelLayer IDUNNO_BOMB =
+            new EntityModelLayer(new Identifier(JcupsMod.MOD_ID, "idunno_bomb"), "main");
     public static final EntityModelLayer KATE =
             new EntityModelLayer(new Identifier(JcupsMod.MOD_ID, "kate"), "main");
     public static final EntityModelLayer JOJO =

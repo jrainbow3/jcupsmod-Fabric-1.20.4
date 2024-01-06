@@ -11,7 +11,7 @@ import net.minecraft.client.util.math.MatrixStack;
 import net.minecraft.util.Identifier;
 
 public class IdunnoBombRenderer extends EntityRenderer<IdunnoBombEntity> {
-    private static final Identifier TEXTURE = new Identifier(JcupsMod.MOD_ID, "textures/entity/brenium_bomb.png");
+    private static final Identifier TEXTURE = new Identifier(JcupsMod.MOD_ID, "textures/entity/idunno_bomb.png");
     private EntityModel<IdunnoBombEntity> model;
 
     public IdunnoBombRenderer(EntityRendererFactory.Context context) {

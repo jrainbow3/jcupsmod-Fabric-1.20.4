@@ -24,6 +24,7 @@ public class ModItemGroups {
                         entries.add(ModBlocks.BRENIUM_BLOCK);
                         entries.add(ModBlocks.BRENIUM_EXTRACTOR);
                         entries.add(ModBlocks.BRENIUM_BOMB);
+                        entries.add(ModBlocks.IDUNNO_BOMB);
 
                         entries.add(ModBlocks.BRENIUM_ORE);
                         entries.add(ModBlocks.END_STONE_BRENIUM_ORE);

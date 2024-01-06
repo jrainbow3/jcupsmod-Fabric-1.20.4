@@ -24,6 +24,8 @@ public class BreniumBombEntity extends TntEntity {
     public static BreniumBombEntity create(World world, double x, double y, double z, LivingEntity igniter) {
         BreniumBombEntity entity = new BreniumBombEntity(ModEntities.BRENIUM_BOMB, world);
         entity.updatePosition(x, y, z);
+        double d = world.random.nextDouble() * 6.2831854820251465;
+        entity.setVelocity(-Math.sin(d) * 0.02, 0.20000000298023224, -Math.cos(d) * 0.02);
         entity.igniter = igniter;
         return entity;
     }

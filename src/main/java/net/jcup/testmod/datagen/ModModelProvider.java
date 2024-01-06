@@ -24,6 +24,7 @@ public class ModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.END_STONE_BRENIUM_ORE);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.BRENIUM_EXTRACTOR);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.BRENIUM_BOMB);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.IDUNNO_BOMB);
     }
 
     @Override

@@ -18,7 +18,7 @@ public class ModEntities {
         new Identifier(JcupsMod.MOD_ID, "brenium_bomb"),
         FabricEntityTypeBuilder.create(SpawnGroup.MISC, BreniumBombEntity::new).dimensions(EntityDimensions.fixed(1f, 1f)).build());
     public static final EntityType<IdunnoBombEntity> IDUNNO_BOMB = Registry.register(Registries.ENTITY_TYPE,
-            new Identifier(JcupsMod.MOD_ID, "brenium_bomb"),
+            new Identifier(JcupsMod.MOD_ID, "idunno_bomb"),
             FabricEntityTypeBuilder.create(SpawnGroup.MISC, IdunnoBombEntity::new).dimensions(EntityDimensions.fixed(1f, 1f)).build());
     public static final EntityType<KateEntity> KATE = Registry.register(Registries.ENTITY_TYPE,
             new Identifier(JcupsMod.MOD_ID, "kate"),

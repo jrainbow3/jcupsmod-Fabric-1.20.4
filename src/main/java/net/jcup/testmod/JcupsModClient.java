@@ -19,6 +19,8 @@ public class JcupsModClient implements ClientModInitializer {
     public void onInitializeClient() {
         EntityRendererRegistry.register(ModEntities.BRENIUM_BOMB, BreniumBombRenderer::new);
         EntityModelLayerRegistry.registerModelLayer(ModModelLayers.BRENIUM_BOMB, BreniumBombModel::getTexturedModelData);
+        EntityRendererRegistry.register(ModEntities.IDUNNO_BOMB, IdunnoBombRenderer::new);
+        EntityModelLayerRegistry.registerModelLayer(ModModelLayers.IDUNNO_BOMB, BreniumBombModel::getTexturedModelData);
         EntityRendererRegistry.register(ModEntities.KATE, KateRenderer::new);
         EntityModelLayerRegistry.registerModelLayer(ModModelLayers.KATE, KateModel::getTexturedModelData);
         EntityRendererRegistry.register(ModEntities.JOJO, JojoRenderer::new);
